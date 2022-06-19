@@ -1,0 +1,14 @@
+[
+  {
+    "modid": "moonnight",
+    "name": "MoonNight",
+    "description": "MoonNight.",
+    "version": "20220501",
+    "mcversion": "1.12.2",
+    "logoFile": "",
+    "updateUrl": "",
+    "authorList": ["fireanmeng","Project MoonHalo"],
+    "screenshots": [],
+    "dependencies": []
+  }
+]

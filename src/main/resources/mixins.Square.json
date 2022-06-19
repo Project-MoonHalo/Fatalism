@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "compatibilityLevel": "JAVA_8",
+  "package": "MoonHalo.Square.Mixin.Classes",
+  "refmap": "mixins.Square.refmap.json",
+  "mixins": [
+
+  ],
+  "client": [
+    "MixinMinecraft"
+  ]
+}
