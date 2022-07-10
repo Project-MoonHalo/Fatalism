@@ -1,4 +1,4 @@
-package MoonHalo.Square.Mixin;
+package MoonHalo.Fatalism.Mixin;
 
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import org.apache.logging.log4j.LogManager;
@@ -11,15 +11,15 @@ import java.util.Map;
 
 //@IFMLLoadingPlugin.TransformerExclusions({"MoonHalo.MoonNight.asm"})
 @IFMLLoadingPlugin.MCVersion("1.12.2")
-@IFMLLoadingPlugin.Name("SquareCoreMod")
+@IFMLLoadingPlugin.Name("fatalismCoreMod")
 @IFMLLoadingPlugin.SortingIndex(value = Integer.MAX_VALUE)
 public class MixinLoader implements IFMLLoadingPlugin {
 
-    public static final Logger logger = LogManager.getLogger("SquareCoreMod");
+    public static final Logger logger = LogManager.getLogger("fatalismCoreMod");
 
     public MixinLoader() {
         MixinBootstrap.init();
-        Mixins.addConfigurations("mixins.Square.json");
+        Mixins.addConfigurations("mixins.Fatalism.json");
         MixinEnvironment.getDefaultEnvironment().setObfuscationContext("searge");
         MixinEnvironment.getDefaultEnvironment().getObfuscationContext();
     }

@@ -41,8 +41,8 @@ minecraft {
         client {
             workingDirectory project.file('run')
 
-            property 'fml.coreMods.load', 'MoonHalo.Square.Mixin.MixinLoader'
-            property 'mixin.env.disableRefMap', 'true' // Disable refmap so we don't get trolled by Baritone
+            property 'fml.coreMods.load', 'MoonHalo.Fatalism.Mixin.MixinLoader'
+            property 'mixin.env.disableRefMap', 'false' // Disable refmap so we don't get trolled by Baritone
 
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'debug'
@@ -80,7 +80,7 @@ dependencies {
 
 mixin {
     defaultObfuscationEnv 'searge'
-    add sourceSets.main, 'mixins.Square.refmap.json'
+    add sourceSets.main, 'mixins.Fatalism.refmap.json'
 }
 
 
@@ -108,13 +108,13 @@ jar {
     manifest {
         attributes(
                 'Manifest-Version': 1.0,
-                'MixinConfigs': 'mixins.Square.json',
+                'MixinConfigs': 'mixins.Fatalism.json',
                 'tweakClass': 'org.spongepowered.asm.launch.MixinTweaker',
                 'TweakOrder': 0,
                 'FMLCorePluginContainsFMLMod': 'true',
-                'FMLCorePlugin': 'MoonHalo.Square.Mixin.MixinLoader',
+                'FMLCorePlugin': 'MoonHalo.Fatalism.Mixin.MixinLoader',
                 'ForceLoadAsMod': 'true',
-                'FMLAT': 'Uranium_at.cfg'
+                'FMLAT': 'Fatalism_at.cfg'
         )
     }
 

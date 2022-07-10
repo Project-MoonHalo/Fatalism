@@ -1,6 +1,4 @@
-package MoonHalo.Square.Utils;
-
-import org.reflections.Reflections;
+package MoonHalo.Fatalism.Utils;
 
 import java.io.File;
 import java.io.FileFilter;

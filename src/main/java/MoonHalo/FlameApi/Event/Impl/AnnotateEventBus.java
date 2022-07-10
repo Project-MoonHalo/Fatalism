@@ -2,28 +2,33 @@ package MoonHalo.FlameApi.Event.Impl;
 
 import MoonHalo.FlameApi.Event.EventApi;
 import MoonHalo.FlameApi.Event.ListenerData;
-import MoonHalo.Square.Square;
-import MoonHalo.Square.Utils.ClassUtil;
 
 import java.lang.reflect.Method;
 import java.util.Comparator;
 
 public class AnnotateEventBus implements EventApi {
     public AnnotateEventBus(){
-        for (Class clz:ClassUtil.getClasses(Square.class.getName())){
-            Register(clz);
-        }
         ListenerList.sort(new ListenerComparator());
     }
     @Override
-    public void Register(Class clz) {
+    public void Register(Object instance) {
+        Class clz = instance.getClass();
         for(Method method: clz.getMethods()){
             if(method.isAnnotationPresent(Listener.class)){
                 ListenerData listenerData = new ListenerData();
                 listenerData.method = method;
-                listenerData.Owner = clz;
+                listenerData.Owner = instance;
                 listenerData.Priority = method.getAnnotation(Listener.class).priority();
                 ListenerList.add(listenerData);
+            }
+        }
+        ListenerList.sort(new ListenerComparator());
+    }
+    @Override
+    public void Unregister(Object instance){
+        for(ListenerData listenerData : ListenerList){
+            if(listenerData.Owner == instance){
+                ListenerList.remove(instance);
             }
         }
     }

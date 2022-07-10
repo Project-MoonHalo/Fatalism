@@ -1,6 +1,6 @@
 package MoonHalo.FlameApi.Event;
 
-import MoonHalo.Square.Square;
+import MoonHalo.Fatalism.Fatalism;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +10,13 @@ public interface EventApi {
     public default void submit(Event event){
         for (ListenerData listenerData:ListenerList){
             try{
-                Square.logger.info("tried to post event,method is "+listenerData.method+" ,owner is "+listenerData.Owner);
+                Fatalism.logger.info("tried to post event,method is "+listenerData.method+" ,owner is "+listenerData.Owner);
                 listenerData.method.invoke(listenerData.Owner,event);
             }catch (Exception e){
 
             }
         }
     }
-    public  void Register(Class clz);
-
+    public  void Register(Object instance);
+    public void Unregister(Object instance);
 }

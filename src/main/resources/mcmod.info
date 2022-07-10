@@ -1,9 +1,9 @@
 [
   {
-    "modid": "moonnight",
-    "name": "MoonNight",
-    "description": "MoonNight.",
-    "version": "20220501",
+    "modid": "fatalism",
+    "name": "Fatalism",
+    "description": "conflict and light.",
+    "version": "0.0.1",
     "mcversion": "1.12.2",
     "logoFile": "",
     "updateUrl": "",

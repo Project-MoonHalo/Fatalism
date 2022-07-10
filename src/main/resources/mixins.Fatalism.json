@@ -1,0 +1,15 @@
+{
+  "required": false,
+  "compatibilityLevel": "JAVA_8",
+  "package": "MoonHalo.Fatalism.Mixin.Classes",
+  "refmap": "mixins.Fatalism.refmap.json",
+  "mixins": [
+    "MixinMinecraft",
+    "MixinGuiMainMenu",
+    "MixinEntityPlayerSP",
+    "MixinGuiSubtitleOverlay"
+  ],
+  "client": [
+
+  ]
+}
