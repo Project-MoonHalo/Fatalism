@@ -1,5 +1,6 @@
-# Fatalism
-An open-source minecraft utility mod.    
+# Fatalism  
+An open-source minecraft utility mod.  
+
 # About  
-This project under MIT license.    
-Render code from CursaOld by Eridani Team.
+This project is under the MIT open-source license.  
+The rendering code for this project is from CursaOld, provided by the Eridani team.  
