@@ -8,7 +8,6 @@ import java.awt.*;
 public class FontManager {
     public static CFontRenderer fontRenderer = new CFontRenderer(new CFont.CustomFont("/assets/minecraft/fonts/Comfortaa-Bold.ttf", 18f, Font.PLAIN), true, false);
     public static CFontRenderer getFontRenderer(){
-        fontRenderer.setAntiAlias(true);
         return fontRenderer;
     }
 }

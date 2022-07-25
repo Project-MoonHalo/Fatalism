@@ -13,8 +13,6 @@ public class FlameCore {
     public static List<FlameMod> flameModList = new ArrayList<>();
     public static void load(){
         for (Class<?> clz:getClasses("MoonHalo")){
-
-            Fatalism.logger.info(clz.getName());
             if(clz.getSuperclass() == FlameMod.class){
                 try {
                     flameModList.add((FlameMod) clz.newInstance());

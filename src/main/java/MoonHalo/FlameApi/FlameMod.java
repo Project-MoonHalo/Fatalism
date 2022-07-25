@@ -12,4 +12,10 @@ public class FlameMod {
         }
         throw new IllegalStateException("No Information on class " + this.getClass().getCanonicalName() + "!");
     }
+    public String getModName() {
+        if (this.getClass().isAnnotationPresent(Mod.class)) {
+            return this.getClass().getAnnotation(Mod.class).name();
+        }
+        throw new IllegalStateException("No name on class " + this.getClass().getCanonicalName() + "!");
+    }
 }
